@@ -5,5 +5,7 @@ var wordSelected = words[Math.floor(Math.random() * words.length)];
 
 var answerSection = document.getElementById("answer-section")
 var letters = document.querySelectorAll(".letter");
-var guessedLetters = 0;
+
+var guessedLetters = [];
+var wrongLetters=[];
 var wrongAttempts = 0;
