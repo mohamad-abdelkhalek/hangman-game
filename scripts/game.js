@@ -23,7 +23,7 @@ letters.forEach(function(letterDiv) {
   letterDiv.addEventListener("click", function() {
     var letter = this.textContent;
     handleGuess(letter);
-    this.classList.add("pressed"); // Optional: Add class to show that letter was pressed
+    this.classList.add("pressed");
   });
 });
 
@@ -82,8 +82,6 @@ function handleGuess(letter) {
     checkLoss();
   }
 }
-
-
 
 function startGame(){
   displayDashes();
