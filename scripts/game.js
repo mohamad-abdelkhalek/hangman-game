@@ -14,3 +14,12 @@ function displayDashes() {
     return "<span>_</span>";
   }).join(" ");
 }
+
+var letters = document.querySelectorAll(".letter");
+letters.forEach(function(letterDiv) {
+  letterDiv.addEventListener("click", function() {
+    var letter = this.textContent;
+    handleGuess(letter);
+    this.classList.add("pressed"); // Optional: Add class to show that letter was pressed
+  });
+});
