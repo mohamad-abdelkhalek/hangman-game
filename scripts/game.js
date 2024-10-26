@@ -54,6 +54,19 @@ function displayHangmanPart() {
   }
 }
 
+function checkWin() {
+  var currentAnswer = answerSection.innerText.replace(/\s+/g, "");
+  if (currentAnswer === wordSelected) {
+    setTimeout(function() { alert("You Win!"); }, 100);
+  }
+}
+
+function checkLoss() {
+  if (wrongAttempts >= maxWrongAttempts) {
+    setTimeout(function() { alert("Game Over! The word was: " + wordSelected); }, 100);
+  }
+}
+
 
 function startGame(){
   displayDashes();
