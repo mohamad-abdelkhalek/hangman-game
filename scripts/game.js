@@ -8,6 +8,9 @@ var letters = document.querySelectorAll(".letter");
 
 var guessedLetters = [];
 
+var wrongAttempts = 0;
+var maxWrongAttempts = bodyParts.length;
+
 
 function displayDashes() {
   answerSection.innerHTML = wordSelected.split("").map(function() {
@@ -34,3 +37,10 @@ document.addEventListener("keydown", function(c) {
     }
   }
 });
+
+
+function startGame(){
+  displayDashes();
+}
+
+startGame();
