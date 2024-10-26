@@ -1,4 +1,10 @@
-var words = ["JAVASCRIPT", "HTML", "CSS", "PYTHON", "HANG", "GAME", "PROGRAMMER", "DEVELOPER"];
+var words = [
+  "JAVASCRIPT", "HTML", "CSS", "PYTHON", "HANG", "GAME", "PROGRAMMER", "DEVELOPER",
+  "REACT", "NODE", "ANGULAR", "VUE", "DATABASE", "GITHUB", "API", "FRONTEND", "BACKEND", 
+  "FULLSTACK", "ALGORITHM", "FUNCTION", "VARIABLE", "OBJECT", "CLASS", "METHOD", "ASYNC",
+  "PROMISE", "LOOP", "ARRAY", "STRING", "BOOLEAN"
+];
+
 var bodyParts = ["head", "body", "left-hand", "right-hand", "left-leg", "right-leg"];
 
 var wordSelected = words[Math.floor(Math.random() * words.length)];
