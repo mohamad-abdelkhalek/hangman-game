@@ -23,3 +23,14 @@ letters.forEach(function(letterDiv) {
     this.classList.add("pressed"); // Optional: Add class to show that letter was pressed
   });
 });
+
+document.addEventListener("keydown", function(c) {
+  var letter = c.key.toUpperCase();
+  if (/^[A-Z]$/.test(letter)) {
+    handleGuess(letter);
+    var letterDiv = Array.from(letters).find(div => div.textContent === letter);
+    if (letterDiv && !letterDiv.classList.contains("pressed")) {
+      letterDiv.classList.add("pressed");
+    }
+  }
+});
