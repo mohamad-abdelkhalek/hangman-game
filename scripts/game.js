@@ -7,5 +7,10 @@ var answerSection = document.getElementById("answer-section")
 var letters = document.querySelectorAll(".letter");
 
 var guessedLetters = [];
-var wrongLetters=[];
-var wrongAttempts = 0;
+
+
+function displayDashes() {
+  answerSection.innerHTML = wordSelected.split("").map(function() {
+    return "<span>_</span>";
+  }).join(" ");
+}
