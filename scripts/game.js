@@ -57,15 +57,32 @@ function displayHangmanPart() {
 function checkWin() {
   var currentAnswer = answerSection.innerText.replace(/\s+/g, "");
   if (currentAnswer === wordSelected) {
-    setTimeout(function() { alert("You Win!"); }, 100);
+    setTimeout(function() { 
+      alert("You Win!"); }, 150);
   }
 }
 
 function checkLoss() {
   if (wrongAttempts >= maxWrongAttempts) {
-    setTimeout(function() { alert("Game Over! The word was: " + wordSelected); }, 100);
+    setTimeout(function() { 
+      alert("Game Over! The word was: " + wordSelected); }, 150);
   }
 }
+
+function handleGuess(letter) {
+  if (guessedLetters.includes(letter) || wrongAttempts >= maxWrongAttempts) return;
+  guessedLetters.push(letter);
+
+  if (wordSelected.includes(letter)) {
+    updateWordDisplay();
+    checkWin();
+  } else {
+    wrongAttempts++;
+    displayHangmanPart();
+    checkLoss();
+  }
+}
+
 
 
 function startGame(){
