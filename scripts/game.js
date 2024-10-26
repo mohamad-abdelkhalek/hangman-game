@@ -38,6 +38,20 @@ document.addEventListener("keydown", function(c) {
   }
 });
 
+function updateWordDisplay() {
+  answerSection.innerHTML = wordSelected.split("").map(function(letter) {
+    return guessedLetters.includes(letter) ? letter : "_";
+  }).join(" ");
+}
+
+function displayHangmanPart() {
+  if (partToShow) {
+    var partElement = document.createElement("img");
+    partElement.src = `./assets/${partToShow}.svg`;
+    document.getElementById("hang").appendChild(partElement);
+  }
+}
+
 
 function startGame(){
   displayDashes();
