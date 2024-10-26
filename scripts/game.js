@@ -45,9 +45,11 @@ function updateWordDisplay() {
 }
 
 function displayHangmanPart() {
+  var partToShow = bodyParts[wrongAttempts - 1];
   if (partToShow) {
     var partElement = document.createElement("img");
     partElement.src = `./assets/${partToShow}.svg`;
+    partElement.classList.add(partToShow);
     document.getElementById("hang").appendChild(partElement);
   }
 }
