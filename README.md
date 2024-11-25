@@ -1,6 +1,6 @@
 # Hangman Game 🎮
 
-A fun and interactive **Hangman Game** built with **HTML**, **CSS**, and **JavaScript**. Test your word-guessing skills as you try to uncover a hidden word by guessing one letter at a time before running out of attempts!
+A interactive and fun **Hangman Game** built with **HTML**, **CSS**, and **JavaScript**. Test your word-guessing skills as you try to uncover a hidden word by guessing one letter at a time before running out of attempts!
 
 ## Features
 - 🎨 **User-Friendly Interface**: A visually appealing design that is fully responsive and optimized for both desktop and mobile devices.
